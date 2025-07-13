@@ -1,0 +1,139 @@
+/* Style for the header section */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+#header .logo {
+    height: 70px;
+    cursor: pointer;
+}
+
+#header img {
+    height: 25px;
+}
+
+/* Navbar styling */
+#navbar {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+
+#navbar li {
+    margin: 0;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #ff4081;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-box input[type="text"] {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-box input[type="text"]:focus {
+    width: 300px;
+    border-color: #ff4081;
+}
+
+.search-box i {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+}
+/* Profile Icon */
+.profile {
+    cursor: pointer;
+}
+
+.profile img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Mobile menu icon */
+#mobile {
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+#mobile i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    #navbar li {
+        margin: 10px 0;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #mobile {
+        display: flex;
+    }
+}
+
+/* Close icon for mobile */
+#close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #333;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,65 @@
+/* General Reset */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Success Box Styling */
+.success-box {
+    background: #ffffff;
+    color: #333;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin-left: 450px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.success-box h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #27ae60;
+}
+
+.success-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.success-box .btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.success-box .btn:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
